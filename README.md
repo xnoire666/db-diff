@@ -8,7 +8,7 @@ Laravel artisan command that diffs two MySQL databases and generates SQL files d
 composer require rickyx12/db-sync
 ```
 
-Laravel 5.5+ auto-discovers the service provider, no manual registration needed.
+Laravel auto-discovers the service provider — no manual registration needed.
 
 ## Configure
 

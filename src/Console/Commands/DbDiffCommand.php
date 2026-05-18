@@ -1,14 +1,14 @@
 <?php
 
-namespace Rickyx12\DbSync\Console\Commands;
+namespace Xnoire666\DbDiff\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Database\Connectors\ConnectionFactory;
 use Illuminate\Support\Facades\Storage;
 
-class DbSyncCommand extends Command
+class DbDiffCommand extends Command
 {
-    protected $signature = 'db:sync';
+    protected $signature = 'db:diff';
 
     protected $description = 'Diff two MySQL databases and write SQL files for missing tables, views, columns, and column property mismatches.';
 
@@ -20,8 +20,8 @@ class DbSyncCommand extends Command
 
     public function handle()
     {
-        $mysql1 = config('db-sync.connections.mysql1');
-        $mysql2 = config('db-sync.connections.mysql2');
+        $mysql1 = config('db-diff.connections.mysql1');
+        $mysql2 = config('db-diff.connections.mysql2');
 
         // Create temporary connections on the fly
         $factory = app(ConnectionFactory::class);
@@ -310,6 +310,6 @@ class DbSyncCommand extends Command
 
     private function disk()
     {
-        return Storage::disk(config('db-sync.output_disk', 'local'));
+        return Storage::disk(config('db-diff.output_disk', 'local'));
     }
 }

@@ -19,22 +19,22 @@ return [
 
         'mysql1' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_SYNC_MYSQL1_HOST'),
-            'database'  => env('DB_SYNC_MYSQL1_DATABASE'),
-            'username'  => env('DB_SYNC_MYSQL1_USERNAME'),
-            'password'  => env('DB_SYNC_MYSQL1_PASSWORD'),
-            'charset'   => env('DB_SYNC_MYSQL1_CHARSET', 'utf8mb4'),
-            'collation' => env('DB_SYNC_MYSQL1_COLLATION', 'utf8mb4_unicode_ci'),
+            'host'      => env('DB_DIFF_MYSQL1_HOST'),
+            'database'  => env('DB_DIFF_MYSQL1_DATABASE'),
+            'username'  => env('DB_DIFF_MYSQL1_USERNAME'),
+            'password'  => env('DB_DIFF_MYSQL1_PASSWORD'),
+            'charset'   => env('DB_DIFF_MYSQL1_CHARSET', 'utf8mb4'),
+            'collation' => env('DB_DIFF_MYSQL1_COLLATION', 'utf8mb4_unicode_ci'),
         ],
 
         'mysql2' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_SYNC_MYSQL2_HOST'),
-            'database'  => env('DB_SYNC_MYSQL2_DATABASE'),
-            'username'  => env('DB_SYNC_MYSQL2_USERNAME'),
-            'password'  => env('DB_SYNC_MYSQL2_PASSWORD'),
-            'charset'   => env('DB_SYNC_MYSQL2_CHARSET', 'utf8mb4'),
-            'collation' => env('DB_SYNC_MYSQL2_COLLATION', 'utf8mb4_unicode_ci'),
+            'host'      => env('DB_DIFF_MYSQL2_HOST'),
+            'database'  => env('DB_DIFF_MYSQL2_DATABASE'),
+            'username'  => env('DB_DIFF_MYSQL2_USERNAME'),
+            'password'  => env('DB_DIFF_MYSQL2_PASSWORD'),
+            'charset'   => env('DB_DIFF_MYSQL2_CHARSET', 'utf8mb4'),
+            'collation' => env('DB_DIFF_MYSQL2_COLLATION', 'utf8mb4_unicode_ci'),
         ],
 
     ],
@@ -49,6 +49,6 @@ return [
     |
     */
 
-    'output_disk' => env('DB_SYNC_OUTPUT_DISK', 'local'),
+    'output_disk' => env('DB_DIFF_OUTPUT_DISK', 'local'),
 
 ];

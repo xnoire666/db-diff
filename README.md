@@ -1,11 +1,11 @@
-# rickyx12/db-sync
+# xnoire666/db-diff
 
 Laravel artisan command that diffs two MySQL databases and generates SQL files describing what the second one is missing — perfect for syncing a staging schema against production.
 
 ## Install
 
 ```bash
-composer require rickyx12/db-sync
+composer require xnoire666/db-diff
 ```
 
 Laravel auto-discovers the service provider — no manual registration needed.
@@ -15,32 +15,32 @@ Laravel auto-discovers the service provider — no manual registration needed.
 Publish the config file:
 
 ```bash
-php artisan vendor:publish --tag=db-sync-config
+php artisan vendor:publish --tag=db-diff-config
 ```
 
-This creates `config/db-sync.php`. Then set the connection details in your application's `.env`:
+This creates `config/db-diff.php`. Then set the connection details in your application's `.env`:
 
 ```env
-DB_SYNC_MYSQL1_HOST=
-DB_SYNC_MYSQL1_DATABASE=
-DB_SYNC_MYSQL1_USERNAME=
-DB_SYNC_MYSQL1_PASSWORD=
+DB_DIFF_MYSQL1_HOST=
+DB_DIFF_MYSQL1_DATABASE=
+DB_DIFF_MYSQL1_USERNAME=
+DB_DIFF_MYSQL1_PASSWORD=
 
-DB_SYNC_MYSQL2_HOST=
-DB_SYNC_MYSQL2_DATABASE=
-DB_SYNC_MYSQL2_USERNAME=
-DB_SYNC_MYSQL2_PASSWORD=
+DB_DIFF_MYSQL2_HOST=
+DB_DIFF_MYSQL2_DATABASE=
+DB_DIFF_MYSQL2_USERNAME=
+DB_DIFF_MYSQL2_PASSWORD=
 ```
 
 - **mysql1** = the *source* (source of truth)
 - **mysql2** = the *target* being compared against the source
 
-Optional keys: `DB_SYNC_MYSQL{1,2}_CHARSET`, `DB_SYNC_MYSQL{1,2}_COLLATION`, and `DB_SYNC_OUTPUT_DISK` (defaults to `local`).
+Optional keys: `DB_DIFF_MYSQL{1,2}_CHARSET`, `DB_DIFF_MYSQL{1,2}_COLLATION`, and `DB_DIFF_OUTPUT_DISK` (defaults to `local`).
 
 ## Run
 
 ```bash
-php artisan db:sync
+php artisan db:diff
 ```
 
 Generates the following SQL files in `storage/app/` (or whichever disk you configured):

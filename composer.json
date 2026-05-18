@@ -1,5 +1,5 @@
 {
-    "name": "rickyx12/db-sync",
+    "name": "xnoire666/db-diff",
     "description": "Laravel artisan command that diffs two MySQL databases and generates SQL files for the missing tables, views, columns, and mismatched column properties.",
     "type": "library",
     "license": "MIT",
@@ -19,13 +19,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Rickyx12\\DbSync\\": "src/"
+            "Xnoire666\\DbDiff\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Rickyx12\\DbSync\\DbSyncServiceProvider"
+                "Xnoire666\\DbDiff\\DbDiffServiceProvider"
             ]
         }
     },

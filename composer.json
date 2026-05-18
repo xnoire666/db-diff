@@ -17,10 +17,22 @@
         "illuminate/filesystem": "^9.0|^10.0|^11.0|^12.0",
         "illuminate/support": "^9.0|^10.0|^11.0|^12.0"
     },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.5|^11.0"
+    },
     "autoload": {
         "psr-4": {
             "Xnoire666\\DbDiff\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Xnoire666\\DbDiff\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
     },
     "extra": {
         "laravel": {

@@ -1,6 +1,7 @@
 # xnoire666/db-diff
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/xnoire666/db-diff.svg?style=flat-square)](https://packagist.org/packages/xnoire666/db-diff)
+[![Tests](https://img.shields.io/github/actions/workflow/status/xnoire666/db-diff/tests.yml?branch=master&label=tests&style=flat-square)](https://github.com/xnoire666/db-diff/actions/workflows/tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/xnoire666/db-diff.svg?style=flat-square)](https://packagist.org/packages/xnoire666/db-diff)
 [![License](https://img.shields.io/packagist/l/xnoire666/db-diff.svg?style=flat-square)](https://packagist.org/packages/xnoire666/db-diff)
 
